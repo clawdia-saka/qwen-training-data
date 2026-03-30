@@ -6,8 +6,8 @@ Base adapter: tetsugan/qwen3.5-9b-rs-sft-v2
 import os, json, hashlib, subprocess
 os.environ["WANDB_DISABLED"] = "true"
 
-# === Install ===
-os.system("pip install -q transformers peft accelerate bitsandbytes datasets")
+# === Install (Qwen3.5 requires latest transformers) ===
+os.system("pip install -q --upgrade transformers peft accelerate bitsandbytes datasets huggingface_hub")
 
 # === Download data from GitHub ===
 DATA_DIR = "/kaggle/working/data"
